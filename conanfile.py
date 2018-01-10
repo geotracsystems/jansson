@@ -23,6 +23,7 @@ class JanssonConan(ConanFile):
             os.environ["CFLAGS"] = "-lm"
         elif self.settings.arch == "x86":
             os.environ["CFLAGS"] = "-m32"
+        os.environ["CFLAGS"] += " -g"
         self.run('cmake ./ %s %s %s %s' % (cmake.command_line, no_documentation, shared, install_dir))
         self.run("cmake --build . %s" % cmake.build_config)
         # Run tests on the host platform
