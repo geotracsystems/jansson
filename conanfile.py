@@ -5,7 +5,7 @@ from conans import ConanFile, CMake, tools
 class JanssonConan(ConanFile):
     name = "libjansson"
     description = "jansson C JSON parsing library"
-    version = "2.10-1"
+    version = "2.10-togs1"
     license = "MIT"
     url = "https://github.com/geotracsystems/jansson"
     settings = "os", "compiler", "build_type", "arch"

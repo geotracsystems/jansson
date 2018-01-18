@@ -8,7 +8,7 @@ username = os.getenv("CONAN_USERNAME", "geotrac")
 
 class JanssonTestConan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
-    requires = "libjansson/2.10-1@%s/%s" % (username, channel)
+    requires = "libjansson/2.10-togs1@%s/%s" % (username, channel)
     generators = "cmake"
 
     def build(self):
